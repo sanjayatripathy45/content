@@ -1,7 +1,10 @@
 /node_modules
 /build
 .env
+temp_auto_push.bat
 yarn-debug.log*
 yarn-error.log*
 _githistory.json
 .DS_Store
+.gitignore
+branch_structure.json
