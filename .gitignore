@@ -2,7 +2,10 @@
 /build
 .env
 yarn-debug.log*
+temp_auto_push.bat
 yarn-error.log*
 _githistory.json
 .DS_Store
 .idea
+.gitignore
+branch_structure.json

@@ -8,7 +8,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
+    "build": "node api.js && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "fix:fm": "node scripts/front-matter_linter.js --fix true",
@@ -22,7 +22,7 @@
     "lint:md": "markdownlint-cli2 \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky install",
-    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "start": "node api.js && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
